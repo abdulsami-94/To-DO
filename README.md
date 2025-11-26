@@ -28,17 +28,13 @@ This project was created to practise **DOM Manipulation, Event Handling, Arrays,
 
 ---
 
-## 📂 Project Structure
-
----
-
 ## 🖼️ Screenshots
 
 ### Input Section
-![Input Preview] ()
+![Input Preview](https://github.com/abdulsami-94/To-DO/blob/main/static.png)
 
 ### Task List
-![Input Preview] ()
+![Input Preview](https://github.com/abdulsami-94/To-DO/blob/main/changed.png)
 
 ---
 
@@ -72,7 +68,7 @@ It also improved my confidence with the DOM and JS logic.
 
 ## 🌐 Live Demo
 
-*(Add your GitHub Pages link here after enabling Pages)*
+*[Demo Link](https://abdulsami-94.github.io/To-DO/)*
 
 ---
 
@@ -82,8 +78,3 @@ This is a learning project.
 Feel free to fork it and experiment!
 
 ---
-
-## 📜 License
-
-MIT License
-
