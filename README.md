@@ -13,6 +13,7 @@ This project was created to practise **DOM Manipulation, Event Handling, Arrays,
 - Live task statistics (Total / Completed / Pending)
 - Clean and minimal UI
 - Fully dynamic rendering using JavaScript
+- Add localStorage support  
 
 ---
 
@@ -48,7 +49,6 @@ This project was created to practise **DOM Manipulation, Event Handling, Arrays,
 
 ## 🛠️ Future Improvements
 
-- Add localStorage support  
 - Highlight completed tasks visually  
 - Add edit task option  
 - Add dark mode  
