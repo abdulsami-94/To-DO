@@ -106,5 +106,11 @@ h1 {
 }
 
 #taskList li button:hover {
-    background: #e60000;
+    background: #da0101;
+}
+
+/* COMPLETED TASK STYLE */
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
 }

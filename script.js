@@ -1,5 +1,19 @@
 let tasks = [];
 
+// Local Storage
+function saveTasks() {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+function loadTasks() {
+    const stored = localStorage.getItem("tasks");
+
+    if (stored) {
+        tasks = JSON.parse(stored);
+    }
+}
+
+// DOM Elements
 const statTotal = document.getElementById("stat-total");
 const statDone = document.getElementById("stat-done");
 const statPending = document.getElementById("stat-pending");
@@ -25,7 +39,7 @@ addBtn.addEventListener("click", function() {
     };
 
     tasks.push(task);
-
+    saveTasks();
     render();
 
     taskInput.value = "";
@@ -44,20 +58,19 @@ addBtn.addEventListener("click", function() {
         const checkbox = document.createElement("input");
         checkbox.type = "checkbox";
         checkbox.checked = task.completed;
-        checkbox.addEventListener("click", function () {
+        checkbox.addEventListener("change", function () {
             toggleComplete(task.id);
         });
 
         // Text
         const textSpan = document.createElement("span");
         textSpan.innerText = task.text;
+        textSpan.classList.toggle("completed", task.completed);
 
-        if (task.completed) {
-            textSpan.style.textDecoration = "line-through";
-        }
 
         // Delete Button
         const delBtn = document.createElement("button");
+        delBtn.type = "button";
         delBtn.innerText = "X";
         delBtn.addEventListener("click" , function () {
             deleteTask(task.id);
@@ -84,6 +97,7 @@ function toggleComplete(id) {
         }
     }
 
+    saveTasks();
     render();
 }
 
@@ -91,12 +105,12 @@ function toggleComplete(id) {
 function deleteTask(id) {
     
     tasks = tasks.filter(task => task.id !== id);
-
+    saveTasks();
     render();
 }
 
 // Update Stats
-function updateStats(id) {
+function updateStats() {
 
     const total = tasks.length;
     const done = tasks.filter (task => task.completed).length;
@@ -106,3 +120,8 @@ function updateStats(id) {
     statDone.innerText = done;
     statPending.innerText = pending;
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    loadTasks();
+    render();
+});
