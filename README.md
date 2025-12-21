@@ -5,6 +5,11 @@ This project was created to practise **DOM Manipulation, Event Handling, Arrays,
 
 ---
 
+⚠️ This project is now maintained in my Project Hub repository:
+https://github.com/abdulsami-94/Project-Hub
+
+---
+
 ## 🚀 Features
 
 - Add new tasks
